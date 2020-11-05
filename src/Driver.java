@@ -18,46 +18,41 @@ public class Driver {
 	/**
 	 * 1.Show how you would use Set to find the unique elements in a List.
 	 * 2.Show an example of HashMap and a TreeMap, and explain the difference. 
-	 * 3.Which should you use (HashMap or TreeMap), if you have to guarantee the order of key, value pairs?
+	 * 3.Which should you use (HashMap or TreeMap), if you have to guarantee the order of key, value pairs? TreeMap
 	 */
-		System.out.println("----Set-----");
-		set.add(newYear);
-		set.add(halloween);
+		System.out.println("----------Set--------------------");
 		set.add(bDay);
 		set.add(christmas);
+		set.add(halloween);
+		set.add(newYear);
 		set.add(lucky);
 		set.add(christmas);
-		System.out.println(set);
+		
+		// See if all the 6 elements are being printed out. Set will automatically not print the duplicate elements.
+		for(R item : set) {
+			System.out.println(item.getName() + " " + item.getDate());
+		} 
+		// How to find the unique elements in a List using Set.
 		System.out.println("Set contains lucky or not : " + set.contains(lucky));
 		
-		System.out.println("----HashMap-----");
-		hashMap.put(newYear, 1);
-		hashMap.put(halloween, 2);
-		hashMap.put(bDay, 3);
-		hashMap.put(christmas, 4);
+		System.out.println("----------HashMap-----------------");
+		hashMap.put(bDay, 1);
+		hashMap.put(christmas, 2);
+		hashMap.put(halloween, 3);
+		hashMap.put(newYear, 4);
 		hashMap.put(lucky, 5);
-		hashMap.put(christmas, 6);
-		
-		System.out.println(hashMap);
 		// Print out the keys in hashMap
 		for(R key : hashMap.keySet())
-			System.out.println(key.getName() + " " + key.getDate());
+			System.out.println(key.getName() + " " + key.getDate() + ": " + hashMap.get(key));
 		
-		System.out.println("----TreeMap-----");
+		System.out.println("----------TreeMap-----------------");
 		treeMap = new TreeMap<R, Integer>(hashMap);
 		treeMap.putAll(hashMap);
-		
-//		treeMap = new TreeMap<R, Integer>();
-//		treeMap.put(newYear, 1);
-//		treeMap.put(halloween, 2);
-//		treeMap.put(bDay, 3);
-//		treeMap.put(christmas, 4);
-//		treeMap.put(lucky, 5);
-//		treeMap.put(christmas, 6);
-		System.out.println(treeMap);
-		// Print out the keys in treeMap
+
+		// Print out the keys and values in treeMap. TreeMap can sort the keys in hashMap so it is guaranteed that the order
+		// of key, value pairs remains the same.
 		for(R key : treeMap.keySet())
-			System.out.println(key.getName() + " " + key.getDate());
+			System.out.println(key.getName() + " " + key.getDate() + ": " + treeMap.get(key));
 	}
 	
 	
