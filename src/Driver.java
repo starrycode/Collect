@@ -55,5 +55,29 @@ public class Driver {
 			System.out.println(key.getName() + " " + key.getDate() + ": " + treeMap.get(key));
 	}
 	
+	/**
+	 * The output of this Driver.java is as the following: 
+	 * 
+	 * ----------Set--------------------
+	 * Halloween 1031
+	 * New Year 101
+	 * Birthday 1106
+	 * lucky 1225
+	 * Christmas 1225
+	 * Set contains lucky or not : true
+	 * ----------HashMap-----------------
+	 * Halloween 1031: 3
+	 * New Year 101: 4
+	 * Birthday 1106: 1
+	 * lucky 1225: 5
+	 * Christmas 1225: 2
+	 * ----------TreeMap-----------------
+	 * Birthday 1106: 1
+	 * Christmas 1225: 2
+	 * Halloween 1031: 3
+	 * New Year 101: 4
+	 * lucky 1225: 5
+	 * 
+	 */
 	
 }
